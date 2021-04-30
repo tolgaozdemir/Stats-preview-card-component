@@ -1,0 +1,127 @@
+$darker-blue: hsl(233, 47%, 7%);
+$dark-blue: hsl(244, 38%, 16%);
+$violet: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$light-white: hsla(0, 0%, 100%, 0.75);
+$lighter-white:  hsla(0, 0%, 100%, 0.6);
+
+$large: 80em; // 1280px
+$medium: 70em; // 1120px
+$small: 60em; // 960px
+$smaller: 50em; // 800px
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  
+  @media only screen and (max-width: $medium) {font-size: 56.25%;}
+  @media only screen and (max-width: $small) {font-size: 62.5%;}
+}
+
+body {
+  background: $darker-blue;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  color: $white;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 85%;
+  max-width: 110rem;
+  min-height: 44rem;
+  //margin: 25vh auto;
+  border-radius: 10px;
+  background: $dark-blue;
+  overflow: hidden;
+  
+  @media only screen and (max-width: $small) {flex-direction: column-reverse; width: 60%; position: relative; top: 0; left: 0; transform: none; margin: 5vh auto;}
+  @media only screen and (max-width: $smaller) {width: 85%;}
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 50%;
+  padding: 6rem 10rem 6rem 7rem;
+  
+  @media only screen and (max-width: $large) {padding: 4rem 7.5rem 4rem 5rem}
+  @media only screen and (max-width: $medium) {padding: 4rem;}
+  @media only screen and (max-width: $small) {align-items: center; text-align: center; flex: 1 1 40rem;}
+}
+
+.details {
+  @media only screen and (max-width: $small) {margin-bottom: 5rem;}
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  
+  @media only screen and (max-width: $smaller) {font-size: 3rem;}
+}
+
+.violet {
+  color: $violet;
+}
+
+.paragraph {
+  color: $light-white;
+  line-height: 1.8;
+}
+
+.stats {
+  display: flex;
+  
+  @media only screen and (max-width: $smaller) {flex-direction: column;}
+  
+  &__block {
+    display: inline-block;
+    
+    &:not(:last-child) {
+      margin-right: 5rem;
+      
+      @media only screen and (max-width: $medium) {margin-right: 7rem;}
+      @media only screen and (max-width: $smaller) {margin-right: 0; margin-bottom: 3rem;}
+    }
+  
+    &-number {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: .8rem;
+    }
+    
+    &-heading {
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 1.3rem;
+      color: $lighter-white;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+    }
+  }
+}
+
+.imgdiv {
+  flex: 1 1 50%;
+  background-color: $violet;
+  
+  &__image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    opacity: .85;
+  }
+}
