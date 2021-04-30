@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/tolgaozdemir/frontend-mentor-challenge-1)
-- Live Site URL: [Add live site URL here](https://focused-bartik-b28126.netlify.app/)
+- Solution URL: (https://github.com/tolgaozdemir/frontend-mentor-challenge-1)
+- Live Site URL: (https://focused-bartik-b28126.netlify.app/)
 
 ## My process
 
